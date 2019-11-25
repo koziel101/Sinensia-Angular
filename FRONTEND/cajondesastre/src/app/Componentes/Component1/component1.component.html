@@ -1,0 +1,28 @@
+<h1>Soy el componente 1</h1>
+<p>Mi nombre es {{nombre}} {{apelido1}} {{apelido2}}</p>
+<p>{{numeroAleatorio}}</p>
+
+<p>{{frutas[1].nombre}}</p>
+
+<p>{{colores[1]}}</p>
+
+<ul>
+    <li *ngFor="let color of colores">{{color}}</li>
+</ul>
+
+<h1>Exercicio</h1>
+
+<table border="1">
+    <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Procedencia</th>
+    </tr>
+    <tr *ngFor="let fruta of frutas">
+        <td>{{fruta.id}}</td>
+        <td>{{fruta.nombre}}</td>
+        <td>{{fruta.precio}}</td>
+        <td>{{fruta.procedencia}}</td>
+    </tr>
+</table>
