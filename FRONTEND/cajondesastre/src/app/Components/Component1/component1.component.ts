@@ -15,6 +15,7 @@ export class Component1Component{
 
     colores:string[] = ["Rojo", "Amarillo", "Naranja", "Lima"];
 
+// Ejercicio
     frutas = [
         {
             id:1233,
@@ -40,4 +41,10 @@ export class Component1Component{
             precio:1.7,
             procedencia:"Lleida"
         }];
+
+
+        frutas2 = [];
+        cambiar(): void{
+            this.frutas2.push(this.frutas.pop());
+        }
 }

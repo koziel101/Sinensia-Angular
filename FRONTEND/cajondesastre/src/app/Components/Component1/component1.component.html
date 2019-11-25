@@ -10,7 +10,7 @@
     <li *ngFor="let color of colores">{{color}}</li>
 </ul>
 
-<h1>Exercicio</h1>
+<h1>Ejercicio</h1>
 
 <table border="1">
     <tr>
@@ -26,3 +26,22 @@
         <td>{{fruta.procedencia}}</td>
     </tr>
 </table>
+
+<h1>Ejercicio2</h1>
+
+<table border="1">
+    <tr>
+        <th>Código</th>
+        <th>Nombre</th>
+        <th>Precio</th>
+        <th>Procedencia</th>
+    </tr>
+    <tr *ngFor="let fruta of frutas">
+        <td>{{fruta.id}}</td>
+        <td>{{fruta.nombre}}</td>
+        <td>{{fruta.precio}}</td>
+        <td>{{fruta.procedencia}}</td>
+    </tr>
+</table>
+
+<button (click)="cambiar()">Mover</button>
