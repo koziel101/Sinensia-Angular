@@ -19,7 +19,14 @@ export class Component2Component implements OnInit {
   opciones:string[] = ["SOFTWARE", "HARDWARE", "CONSUMIBLES"];
 
   sistemaNotificacion:string = "email";
+
   ngOnInit() {
+    this.calcularCaracteres();
+  }
+
+  numeroCaracteres:number = undefined;
+  calcularCaracteres(): void{
+    this.numeroCaracteres = this.nombre.length;
   }
 
 }

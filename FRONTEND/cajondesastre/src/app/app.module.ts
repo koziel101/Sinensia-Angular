@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms' // Para disponer de 2-way databindi
 import { AppComponent } from './app.component';
 import { Component1Component } from "./Componentes/Component1/component1.component";
 import { Component2Component } from './componentes/component2/component2.component';
+import { Component3Component } from './Componentes/component3/component3.component';
+
 
 // Services
 
@@ -18,7 +20,8 @@ import { Component2Component } from './componentes/component2/component2.compone
   declarations: [
     AppComponent,
     Component1Component,
-    Component2Component
+    Component2Component,
+    Component3Component
   ],
   imports: [
     BrowserModule,

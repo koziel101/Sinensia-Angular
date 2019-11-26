@@ -5,9 +5,9 @@
 <h3 *ngIf="calculo >= 18">Titulo exclusivo para mayores de edad 18</h3>
 
 
-<p>El nombre es {{nombre}} mayor de edad {{mayorEdad}}</p>
+<p>El nombre es {{nombre}}, mayor de edad: {{mayorEdad}}, y tiene {{numeroCaracteres}} caracteres</p>
 
-<input type="text" [(ngModel)] = "nombre"> 
+<input type="text" (keypress)="calcularCaracteres()" [(ngModel)] = "nombre"> 
 
 <br>
 
