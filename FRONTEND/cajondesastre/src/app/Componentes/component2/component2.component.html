@@ -1,0 +1,40 @@
+<h1>Demo de 2-way data binding</h1>
+
+<h3 *ngIf="mayorEdad">Titulo exclusivo para mayores de edad</h3>
+
+<h3 *ngIf="calculo >= 18">Titulo exclusivo para mayores de edad 18</h3>
+
+
+<p>El nombre es {{nombre}} mayor de edad {{mayorEdad}}</p>
+
+<input type="text" [(ngModel)] = "nombre"> 
+
+<br>
+
+<p>Mira: {{calculo}}</p>
+
+<input type="number" min="10" max="45" [(ngModel)] = "calculo">
+
+<br>
+
+<input type="checkbox" [(ngModel)] = "mayorEdad">
+
+<hr>
+
+<p>fecha: {{fecha}}</p> <br>
+<input type="date" [(ngModel)]="fecha">
+
+<P>Elemento seleccionado: {{elementoSeleccionado}}</P>
+<select [(ngModel)] = "elementoSeleccionado">
+    <option *ngFor="let opcion of opciones">{{opcion}}</option>
+</select>
+
+<p>Sistema de Notificacion: {{sistemaNotificacion}}</p>
+<input type="radio" name="g1" value="email" [(ngModel)] = "sistemaNotificacion">Email<br>
+<input type="radio" name="g1" value="SMS" [(ngModel)] = "sistemaNotificacion">SMS
+
+<br>
+<br>
+<p>Valor atual: {{calculo}}</p>
+<br>
+<input type="range" [(ngModel)] = "calculo" min="10" max="40" step="5">

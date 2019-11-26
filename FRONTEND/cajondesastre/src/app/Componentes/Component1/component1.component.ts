@@ -44,6 +44,8 @@ export class Component1Component{
 
 
         frutas2 = [];
+        //cambiar()
+
         cambiar(): void{
             this.frutas2.push(this.frutas.pop());
         }

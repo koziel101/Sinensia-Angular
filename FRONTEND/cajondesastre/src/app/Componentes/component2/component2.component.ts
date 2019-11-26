@@ -7,8 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Component2Component implements OnInit {
 
-  constructor() { }
+  nombre:string = "Pepin";
+  calculo:number = 42;
+  mayorEdad:boolean = false;
 
+  fecha:Date = new Date;
+
+
+  
+  elementoSeleccionado:string = "HARDWARE";
+  opciones:string[] = ["SOFTWARE", "HARDWARE", "CONSUMIBLES"];
+
+  sistemaNotificacion:string = "email";
   ngOnInit() {
   }
 
