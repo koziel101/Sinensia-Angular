@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { Component1Component } from "./Componentes/Component1/component1.component";
 import { Component2Component } from './componentes/component2/component2.component';
 import { Component3Component } from './Componentes/component3/component3.component';
+import { ComponentPizzaComponent } from './Componentes/component-pizza/component-pizza.component';
 
 
 // Services
@@ -21,7 +22,8 @@ import { Component3Component } from './Componentes/component3/component3.compone
     AppComponent,
     Component1Component,
     Component2Component,
-    Component3Component
+    Component3Component,
+    ComponentPizzaComponent
   ],
   imports: [
     BrowserModule,

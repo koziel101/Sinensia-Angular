@@ -1,0 +1,25 @@
+<!–– 
+Pizza base: 10 euros
+
+ADICIONAIS
+- Margarita = 2 euros
+- Pepperoni = 2 euros
+- Havaiana = 4 euros
+- atun = 3 euros
+- Sinensia = 10 euros
+
+DOBLE QUESO: 5 euros si
+0 euros no
+
+1 a 5 personas: 5 euros por persona
+––>
+
+<h1>PIZZA TIME!</h1>
+
+<p>Tipo da Pizza</p>
+<P>Pizza seleccionada: {{pizzaSelecionada}}</P>
+<select [(ngModel)] = "pizzaSelecionada">
+    <option *ngFor="let pizza of pizzas">{{pizza}}</option>
+</select>
+
+<p>VALOR TOTAL DA PIZZA: {{pizzaTotal}}</p>
