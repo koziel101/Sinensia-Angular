@@ -13,6 +13,7 @@ import { Component3Component } from './Componentes/component3/component3.compone
 import { ComponentPizzaComponent } from './Componentes/component-pizza/component-pizza.component';
 import { Component2Component } from './Componentes/component2/component2.component';
 import { AsteriscadorPipe } from './pipes/asteriscador.pipe';
+import { TrimestrePipe } from './pipes/trimestre.pipe';
 
 
 // Services
@@ -26,7 +27,8 @@ import { AsteriscadorPipe } from './pipes/asteriscador.pipe';
     Component2Component,
     Component3Component,
     ComponentPizzaComponent,
-    AsteriscadorPipe
+    AsteriscadorPipe,
+    TrimestrePipe
   ],
   imports: [
     BrowserModule,

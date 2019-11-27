@@ -1,0 +1,12 @@
+<h2>Pizza Loca</h2>
+<p>Precio base: {{precioBase}}</p>
+<p>Pizza seleccionada: {{selectedPizza.nombre}}</p>
+<p>Doble queso: {{dobleQueso}}</p>
+<p>Número personas: {{numeroPersonas}}</p>
+<p>Precio Final: {{precioFinal}}</p>
+<hr>
+<select [(ngModel)]="selectedPizza" (change)="calculatePrice()">
+    <option *ngFor="let pizza of pizzas" [ngValue]="pizza">{{pizza.nombre}}</option>
+</select><br>
+<input type="checkbox" (change)="calculatePrice()" [(ngModel)]="dobleQueso"/><br>
+<input type="number" (change)="calculatePrice()" (keyup)="calculatePrice()" min="1" max="5" [(ngModel)]="numeroPersonas"/>

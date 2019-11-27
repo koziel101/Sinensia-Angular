@@ -15,12 +15,12 @@ export class ComponentPizzaComponent implements OnInit {
   pizzaTotal: number = 10;
   pizzas: string[] = ["Basica", "Margarita (+2 euros)", "Pepperoni (+2 euros)", "Havaiana (+4 euros)", "Atun (+3 euros)", "Sinensia (+10 euros)"];
   pizzaSelecionada: string = this.pizzas[1];
-  dobleQueso:boolean = false;
-  qntdPessoas:number = 0;
+  dobleQueso: boolean = false;
+  qntdPessoas: number = 0;
 
   finalizarPedido() {
     this.pizzaTotal = 10;
-    
+
     //Calculando sabor da Pizza
     switch (this.pizzaSelecionada) {
       case "Margarita (+2 euros)":
@@ -39,11 +39,13 @@ export class ComponentPizzaComponent implements OnInit {
         this.pizzaTotal = this.pizzaTotal + 10;
         break;
     }
-    
-    if(this.dobleQueso){
+
+    this.pizzaTotal = (this.dobleQueso) ? (this.pizzaTotal = this.pizzaTotal + 5) : 0;
+
+    /* if(this.dobleQueso){
       this.pizzaTotal = this.pizzaTotal + 5;
-    }
-    
+    } */
+
     this.pizzaTotal = Number(this.pizzaTotal) + Number(this.qntdPessoas);
   }
 }
