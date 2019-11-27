@@ -22,4 +22,21 @@ DOBLE QUESO: 5 euros si
     <option *ngFor="let pizza of pizzas">{{pizza}}</option>
 </select>
 
+<br><br>
+
+<input type="checkbox" [(ngModel)] = "dobleQueso"> Doble queso por + 5 euros 
+
+<br><br>
+
+<p>Quantidade de pessoas(+5 euros para cada): {{qntdPessoas}}</p>
+<input type="radio" name="g1" value=1 [(ngModel)] = "qntdPessoas">1<br>
+<input type="radio" name="g1" value=2 [(ngModel)] = "qntdPessoas">2<br>
+<input type="radio" name="g1" value=3 [(ngModel)] = "qntdPessoas">3<br>
+<input type="radio" name="g1" value=4 [(ngModel)] = "qntdPessoas">4<br>
+<input type="radio" name="g1" value=5 [(ngModel)] = "qntdPessoas">5
+
+<br><br>
+<button (click)="finalizarPedido()">Calcular Pizza</button>
+
+<br>
 <p>VALOR TOTAL DA PIZZA: {{pizzaTotal}}</p>
