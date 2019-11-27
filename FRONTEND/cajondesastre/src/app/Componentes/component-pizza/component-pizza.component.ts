@@ -14,7 +14,7 @@ export class ComponentPizzaComponent implements OnInit {
 
   pizzaTotal: number = 10;
   pizzas: string[] = ["Basica", "Margarita (+2 euros)", "Pepperoni (+2 euros)", "Havaiana (+4 euros)", "Atun (+3 euros)", "Sinensia (+10 euros)"];
-  pizzaSelecionada: string = this.pizzas[0];
+  pizzaSelecionada: string = this.pizzas[1];
   dobleQueso:boolean = false;
   qntdPessoas:number = 0;
 

@@ -15,6 +15,8 @@ export class Component1Component{
 
     colores:string[] = ["Rojo", "Amarillo", "Naranja", "Lima"];
 
+    fecha:Date = new Date();
+
 // Ejercicio
     frutas = [
         {

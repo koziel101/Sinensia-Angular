@@ -1,4 +1,21 @@
 <h1>Soy el componente 1</h1>
+
+PIPES:
+<p>{{nombre}} {{nombre | uppercase}}</p>
+
+<p>{{numeroAleatorio}} {{numeroAleatorio | number}}</p>
+
+<p>{{numeroAleatorio}} {{numeroAleatorio | number:'0.3-3'}}</p>
+
+
+FIM DE PIPES
+
+<p>{{fecha}}</p>
+<p>{{fecha | date:'HH:mm'}} {{fecha | date: 'dd/MM/yyyy'}}</p>
+<p>{{fecha}}</p>
+
+Teste Asteriscador: <p>{{apelido1 | asteriscador:'5':'#'}}</p>
+
 <p>Mi nombre es {{nombre}} {{apelido1}} {{apelido2}}</p>
 <p>{{numeroAleatorio}}</p>
 
@@ -24,7 +41,7 @@
         <td>{{fruta.nombre}}</td>
         <td>{{fruta.precio}}</td>
         <td>{{fruta.procedencia}}</td>
-    </tr>
+    </tr>-
 </table>
 
 <h1>Ejercicio2</h1>
