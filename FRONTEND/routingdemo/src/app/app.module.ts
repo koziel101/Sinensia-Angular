@@ -7,6 +7,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AltaComponent } from './components/alta/alta.component';
 import { ListComponent } from './components/list/list.component';
 import { EditComponent } from './components/edit/edit.component';
+import { DemoService } from './services/demo.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { EditComponent } from './components/edit/edit.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [DemoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

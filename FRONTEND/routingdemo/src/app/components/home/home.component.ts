@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DemoService } from 'src/app/services/demo.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  frase: string = undefined;
+
+  constructor(private demoService: DemoService) { }
 
   ngOnInit() {
+    this.frase = this.demoService.getRefran();
   }
 
 }
