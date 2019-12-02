@@ -3,6 +3,8 @@ import { CamareroService } from './services/camarero.service';
 import { Camarero } from './model/camarero';
 import { Cliente } from './model/cliente';
 import { ClienteService } from './services/cliente.service';
+import { ProductoService } from './services/producto.service';
+import { Producto } from './model/producto';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +15,9 @@ export class AppComponent implements OnInit {
 
   camareros: Camarero[] = undefined;
   clientes: Cliente[] = undefined;
+  productos: Producto[] = undefined;
 
-  constructor(private camareroService: CamareroService, private clienteService: ClienteService) {
+  constructor(private camareroService: CamareroService, private clienteService: ClienteService, private productoService: ProductoService) {
   }
 
   ngOnInit(): void {
@@ -28,6 +31,8 @@ export class AppComponent implements OnInit {
       this.clientes = datos;
     });
 
+    this.productoService.getlAll().subscribe(datos => {
+      this.productos = datos;
+    })
   }
-
 }
