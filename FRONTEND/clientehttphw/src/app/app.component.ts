@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CamareroService } from './services/camarero.service';
 import { Camarero } from './model/camarero';
+import { Cliente } from './model/cliente';
+import { ClienteService } from './services/cliente.service';
 
 @Component({
   selector: 'app-root',
@@ -10,17 +12,22 @@ import { Camarero } from './model/camarero';
 export class AppComponent implements OnInit {
 
   camareros: Camarero[] = undefined;
-  constructor(private camareroService: CamareroService) {
+  clientes: Cliente[] = undefined;
+
+  constructor(private camareroService: CamareroService, private clienteService: ClienteService) {
   }
 
   ngOnInit(): void {
     this.camareroService.getlAll().subscribe(datos => {
       //Aquí es cuando llegano los datos definitivamente
       console.log(datos);
-
       this.camareros = datos;
-
     });
+
+    this.clienteService.getAll().subscribe(datos => {
+      this.clientes = datos;
+    });
+
   }
 
 }
