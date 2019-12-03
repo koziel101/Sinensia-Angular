@@ -10,7 +10,7 @@ export class CamareroService {
 
   constructor(private http: HttpClient) { }
 
-  getlAll(): Observable<Camarero[]> {
+  getAll(): Observable<Camarero[]> {
     return this.http.get<Camarero[]>("https://pedi-gest.herokuapp.com/api/camareros");
   }
 

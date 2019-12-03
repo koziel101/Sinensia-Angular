@@ -17,11 +17,13 @@ export class AppComponent implements OnInit {
   clientes: Cliente[] = undefined;
   productos: Producto[] = undefined;
 
-  constructor(private camareroService: CamareroService, private clienteService: ClienteService, private productoService: ProductoService) {
+  constructor(private camareroService: CamareroService,
+    private clienteService: ClienteService,
+    private productoService: ProductoService) {
   }
 
   ngOnInit(): void {
-    this.camareroService.getlAll().subscribe(datos => {
+    this.camareroService.getAll().subscribe(datos => {
       //Aquí es cuando llegano los datos definitivamente
       console.log(datos);
       this.camareros = datos;
@@ -31,7 +33,7 @@ export class AppComponent implements OnInit {
       this.clientes = datos;
     });
 
-    this.productoService.getlAll().subscribe(datos => {
+    this.productoService.getAll().subscribe(datos => {
       this.productos = datos;
     })
   }
