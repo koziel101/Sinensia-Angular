@@ -41,9 +41,31 @@ export class AppComponent implements OnInit {
     })
 
     this.pedidoService.getAll().subscribe(datos => {
-      console.log("Pedidos:");
-      console.log(datos);
+
       this.pedidos = datos;
     })
+  }
+
+  crearCamarero() {
+
+    let cliente = {
+      codigo: 234335,
+      nombre: "Pepito",
+      contactos: [
+        {
+          nombre: "M.Rajoy",
+          telefono: "343544545"
+        }
+      ]
+    }
+
+    let codigoAleatorio: number = Math.floor(Math.random() * 100000);
+    let camarero = new Camarero();
+    camarero.codigo = codigoAleatorio;
+    camarero.nombre = "ALEATORIO_" + codigoAleatorio;
+
+    this.camareroService.create(camarero).subscribe(datos => {
+      console.log(datos);
+    });
   }
 }

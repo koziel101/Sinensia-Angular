@@ -14,4 +14,8 @@ export class CamareroService {
     return this.http.get<Camarero[]>("https://pedi-gest.herokuapp.com/api/camareros");
   }
 
+  create(camarero: Camarero): Observable<Camarero> {
+    return this.http.post<Camarero>("https://pedi-gest.herokuapp.com/api/camareros", camarero);
+  }
+
 }
