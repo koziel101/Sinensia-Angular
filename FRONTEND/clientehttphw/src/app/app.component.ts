@@ -48,24 +48,41 @@ export class AppComponent implements OnInit {
 
   crearCamarero() {
 
-    let cliente = {
-      codigo: 234335,
-      nombre: "Pepito",
-      contactos: [
-        {
-          nombre: "M.Rajoy",
-          telefono: "343544545"
-        }
-      ]
-    }
-
     let codigoAleatorio: number = Math.floor(Math.random() * 100000);
     let camarero = new Camarero();
     camarero.codigo = codigoAleatorio;
     camarero.nombre = "ALEATORIO_" + codigoAleatorio;
 
     this.camareroService.create(camarero).subscribe(datos => {
+      console.log("Dados do camarero:")
       console.log(datos);
     });
+  }
+
+  crearCliente() {
+
+    let codigoAleatorio: number = Math.floor(Math.random() * 100000);
+    let cliente = new Cliente();
+    cliente.codigo = codigoAleatorio;
+    cliente.nombre = "ALEATORIO_" + codigoAleatorio;
+    cliente.contactos
+    //Stuck here
+
+    this.clienteService.create(cliente).subscribe(datos => {
+      console.log("Dados do cliente:")
+      console.log(datos);
+    });
+
+
+    /* {
+  "codigo": 0,
+  "contactos": [
+    {
+      "nombre": "string",
+      "telefono": "string"
+    }
+  ],
+  "nombre": "string"
+} */
   }
 }

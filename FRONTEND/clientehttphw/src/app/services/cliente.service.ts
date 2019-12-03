@@ -13,4 +13,8 @@ export class ClienteService {
   getAll(): Observable<Cliente[]> {
     return this.http.get<Cliente[]>("https://pedi-gest.herokuapp.com/api/clientes");
   }
+
+  create(cliente: Cliente): Observable<Cliente> {
+    return this.http.post<Cliente>("https://pedi-gest.herokuapp.com/api/clientes", cliente);
+  }
 }

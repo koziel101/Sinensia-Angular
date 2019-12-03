@@ -1,5 +1,7 @@
 <h1>Demo cliente HTTP</h1>
 
+<h1>METODOS GET</h1>
+
 <h2>Listado de camareros</h2>
 <ul>
     <li *ngFor="let camarero of camareros">{{camarero.codigo}} {{camarero.nombre}}</li>
@@ -75,3 +77,7 @@
 <h1>METODOS POST</h1>
 
 <button (click)="crearCamarero()">Crear Camarero</button>
+
+<hr>
+
+<button (click)="crearCliente()">Crear Cliente</button>
