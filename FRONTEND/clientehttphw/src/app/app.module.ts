@@ -7,6 +7,7 @@ import { CamareroService } from './services/camarero.service';
 import {HttpClientModule} from '@angular/common/http' // Necessario para Rest
 import { ClienteService } from './services/cliente.service';
 import { ProductoService } from './services/producto.service';
+import { PedidoService } from './services/pedido.service';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,7 @@ import { ProductoService } from './services/producto.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [CamareroService, ClienteService, ProductoService],
+  providers: [CamareroService, ClienteService, ProductoService, PedidoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

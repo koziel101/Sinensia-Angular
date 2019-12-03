@@ -23,7 +23,7 @@
         {{producto.descripcion}}</li>
 </ul> -->
 
-<table >
+<table>
     <tr>
         <th>Categoria</th>
         <th>Codigo</th>
@@ -41,5 +41,33 @@
         <td>{{producto.fechaAlta  | date : 'yyyy-MM-dd'}}</td>
         <td>{{producto.nombre}}</td>
         <td>{{producto.precio}}</td>
+    </tr>
+</table>
+
+<h2>Listado de pedidos</h2>
+
+<table>
+    <tr>
+        <th>Código</th>
+        <th>Fecha</th>
+        <th>Mesa</th>
+        <th>Camarero</th>
+        <th>Detalle</th>
+    </tr>
+    <tr *ngFor="let pedido of pedidos">
+        <td>{{pedido.id}}</td>
+        <td>{{pedido.fecha  | date : 'yyyy-MM-dd'}}</td>
+        <td>{{pedido.mesa}}</td>
+        <td>{{pedido.camarero.nombre}}</td>
+        <td>
+            <table>
+                <tr *ngFor="let lineaPedido of pedido.lineasPedido">
+                    <td>{{lineaPedido.producto.nombre}}</td>
+                    <td>{{lineaPedido.cantidad}}</td>
+                    <td>{{lineaPedido.precio}}</td>
+                    <td>{{lineaPedido.cantidad * lineaPedido.precio}}</td>
+                </tr>
+            </table>
+        </td>
     </tr>
 </table>
