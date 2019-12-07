@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
-import { HttpClientModule} from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ClienteService } from './services/cliente.service';
 import { ProductoService } from './services/producto.service';
 import { PedidoService } from './services/pedido.service';
@@ -13,6 +13,7 @@ import { AltaProductoComponent } from './components/alta-producto/alta-producto.
 import { FormsModule } from '@angular/forms';
 import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // PrimeNG
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { AppRoutingModule } from './app-routing.module';
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [CamareroService, ClienteService, ProductoService, PedidoService],
   bootstrap: [AppComponent]

@@ -1,0 +1,44 @@
+1.- Librerías básicas de primeng
+================================
+
+npm install primeng --save
+npm install primeicons --save
+
+2.- Dependencias...
+===================
+
+npm install @angular/animations --save
+npm install @angular/cdk --save
+
+3.- Incorporamos los estilos CSS que utiliza primeng
+====================================================
+
+en el archivo styles.css incorporamos:
+
+/* Estilos necesarios para primeng */
+
+@import '~primeicons/primeicons.css';
+@import '~primeng/resources/themes/nova-light/theme.css';
+@import '~primeng/resources/primeng.min.css';
+
+
+4.- Incorporamos el módulo BrowserAnimationsModule 
+==================================================
+
+Lo incorporamos en el App.Module.ts
+import {BrowserAnimationsModule} from  '@angular/platform-browser/animations';
+imports: BrowserAnimationsModule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
