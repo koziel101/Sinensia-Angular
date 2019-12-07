@@ -1,5 +1,4 @@
 export class Producto {
-
     categoria: string;
     codigo: number;
     descatalogado: boolean;
@@ -7,5 +6,4 @@ export class Producto {
     fechaAlta: Date;
     nombre: string;
     precio: number;
-
 }

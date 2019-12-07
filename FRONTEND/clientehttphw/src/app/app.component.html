@@ -1,83 +1,11 @@
-<h1>Demo cliente HTTP</h1>
+<nav>
+    <ul>
+        <li><a routerLink="/home">About us</a></li>
+        <li><a routerLink="/altaCamareros">Alta camarero</a></li>
+        <li><a routerLink="/listadocamareros">Listado camarero</a></li>
+        <li><a routerLink="/altaProductos">Alta producto</a></li>
+        <li><a routerLink="/listadoProducto">Listado productos</a></li>
+    </ul>
+</nav>
 
-<h1>METODOS GET</h1>
-
-<h2>Listado de camareros</h2>
-<ul>
-    <li *ngFor="let camarero of camareros">{{camarero.codigo}} {{camarero.nombre}}</li>
-</ul>
-
-<h2>Listado de clientes</h2>
-<ul>
-    <li *ngFor="let cliente of clientes">
-        <div>
-            <h3>{{cliente.codigo}} {{cliente.nombre}}</h3>
-            <ul>
-                <li *ngFor="let contacto of cliente.contactos">{{contacto.nombre}} {{contacto.telefono}}</li>
-            </ul>
-        </div>
-    </li>
-</ul>
-
-<h2>Listado de productos</h2>
-<!-- <ul>
-    <li *ngFor="let producto of productos"> {{producto.codigo}} {{producto.descatalogado}}
-        {{producto.descripcion}}</li>
-</ul> -->
-
-<table>
-    <tr>
-        <th>Categoria</th>
-        <th>Codigo</th>
-        <th>Descatalogado</th>
-        <th>Descripcion</th>
-        <th>Fecha Alta</th>
-        <th>Nombre</th>
-        <th>Precio</th>
-    </tr>
-    <tr *ngFor="let producto of productos">
-        <td>{{producto.categoria}}</td>
-        <td>{{producto.codigo}}</td>
-        <td>{{producto.descatalogado}}</td>
-        <td>{{producto.descripcion}}</td>
-        <td>{{producto.fechaAlta  | date : 'yyyy-MM-dd'}}</td>
-        <td>{{producto.nombre}}</td>
-        <td>{{producto.precio}}</td>
-    </tr>
-</table>
-
-<h2>Listado de pedidos</h2>
-
-<table>
-    <tr>
-        <th>Código</th>
-        <th>Fecha</th>
-        <th>Mesa</th>
-        <th>Camarero</th>
-        <th>Detalle</th>
-    </tr>
-    <tr *ngFor="let pedido of pedidos">
-        <td>{{pedido.id}}</td>
-        <td>{{pedido.fecha  | date : 'yyyy-MM-dd'}}</td>
-        <td>{{pedido.mesa}}</td>
-        <td>{{pedido.camarero.nombre}}</td>
-        <td>
-            <table>
-                <tr *ngFor="let lineaPedido of pedido.lineasPedido">
-                    <td>{{lineaPedido.producto.nombre}}</td>
-                    <td>{{lineaPedido.cantidad}}</td>
-                    <td>{{lineaPedido.precio}}</td>
-                    <td>{{lineaPedido.cantidad * lineaPedido.precio}}</td>
-                </tr>
-            </table>
-        </td>
-    </tr>
-</table>
-
-<h1>METODOS POST</h1>
-
-<button (click)="crearCamarero()">Crear Camarero</button>
-
-<hr>
-
-<button (click)="crearCliente()">Crear Cliente</button>
+<router-outlet></router-outlet>

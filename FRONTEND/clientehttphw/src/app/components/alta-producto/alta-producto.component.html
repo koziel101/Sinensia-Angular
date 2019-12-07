@@ -1,0 +1,38 @@
+<h2>Alta de Producto</h2>
+<legend>
+    <div>
+        <label>Codigo: </label>
+        <input type="text" [(ngModel)]="producto.codigo" />
+    </div><br>
+    <div>
+        <label>Nombre: </label>
+        <input type="text" [(ngModel)]="producto.nombre" />
+    </div><br>
+    <div>
+        Categoria: <select [(ngModel)]="producto.categoria">
+            <option>CAFE</option>
+            <option>CERVEZA</option>
+            <option>TAPA</option>
+            <option>COMIDA</option>
+        </select>
+    </div><br>
+    <div>
+        <label>Descripcion: </label>
+        <input type="text" [(ngModel)]="producto.descripcion" />
+    </div><br>
+    <div>
+        <label>Precio: </label>
+        <input type="text" [(ngModel)]="producto.precio" />
+    </div><br>
+    <div>
+        <label>Fecha Alta: </label>
+        <input type="date" [(ngModel)]="producto.fechaAlta" />
+    </div><br>
+    <div>
+        <label>Descatalogado: </label>
+        <input type="checkbox" [(ngModel)]="producto.descatalogado" />
+    </div><br>
+
+</legend>
+
+<button (click)="crear()">Criar Producto</button>
