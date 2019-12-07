@@ -15,6 +15,8 @@ import { HomeComponent } from './components/home/home.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // PrimeNG
 
+//Modulos de PrimeNG
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
     HttpClientModule,
     FormsModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ButtonModule
   ],
   providers: [CamareroService, ClienteService, ProductoService, PedidoService],
   bootstrap: [AppComponent]

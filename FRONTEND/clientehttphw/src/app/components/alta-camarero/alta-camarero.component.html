@@ -1,5 +1,8 @@
 <h2>Alta de Camarero</h2>
 
-<input type="text" [(ngModel)]="camarero.codigo"/><br>
-<input type="text" [(ngModel)]="camarero.nombre"/><br>
-<button (click)="crear()">Criar Camarero</button>
+<input type="text" [(ngModel)]="camarero.codigo" /><br>
+<input type="text" [(ngModel)]="camarero.nombre" /><br>
+
+<br>
+
+<button pButton type="button" label="Criar Camarero" class="ui-button-rounded" (click)="crear()"></button>
