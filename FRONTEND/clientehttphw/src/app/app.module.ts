@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; 
 
 //Modulos de PrimeNG
 import { ButtonModule } from 'primeng/button';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { ButtonModule } from 'primeng/button';
     FormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ButtonModule
+    ButtonModule,
+    TableModule
   ],
   providers: [CamareroService, ClienteService, ProductoService, PedidoService],
   bootstrap: [AppComponent]
