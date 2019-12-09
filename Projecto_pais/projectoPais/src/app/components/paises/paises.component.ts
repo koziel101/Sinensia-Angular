@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Region } from 'src/app/model/region';
+import { PaisService } from 'src/app/services/pais.service';
+import { Pais } from 'src/app/model/pais';
 
 @Component({
   selector: 'app-paises',
@@ -13,24 +15,29 @@ export class PaisesComponent implements OnInit {
   selectedRegion: string = "Africa" */
 
   regions: Region[];
-
   selectedRegion: Region;
+  paises: Pais[] = [];
 
-  
-  constructor() {
+  region:string = "europe";
+
+  constructor(private paisesService: PaisService) {
     this.regions = [
-      { name: 'Africa', code: 'Africa' },
-      { name: 'Americas', code: 'Americas' },
-      { name: 'Asia', code: 'Asia' },
-      { name: 'Europe', code: 'Europe' },
-      { name: 'Oceania', code: 'Oceania' }
+      { name: 'africa', code: 'africa' },
+      { name: 'americas', code: 'americas' },
+      { name: 'asia', code: 'asia' },
+      { name: 'europe', code: 'europe' },
+      { name: 'oceania', code: 'oceania' }
     ];
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() { }
 
-  public Region = new class {
-
+  buscarPaises(){
+    console.log("Buscamos paises de " + this.selectedRegion.name);
+    this.paisesService.getByRegion(this.selectedRegion.name).subscribe(data => {
+      this.paises = data;
+      console.log(data);
+    });
+    
   }
 }

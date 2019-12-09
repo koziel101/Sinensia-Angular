@@ -1,3 +1,27 @@
 <h3 class="first">Choose the region: </h3>
-<p-dropdown [options]="regions" [(ngModel)]="selectedRegion" placeholder="Select a Region" optionLabel="name" [showClear]="true"></p-dropdown>
-<p>Selected City: {{selectedRegion ? selectedRegion.name : 'none'}}</p>
+<p-dropdown [options]="regions" [(ngModel)]="selectedRegion" placeholder="Select a Region" optionLabel="name" [showClear]="true" (onChange)="buscarPaises()">
+</p-dropdown>
+
+<p>Selected Region: {{selectedRegion ? selectedRegion.name : 'none'}}</p>
+
+<br>
+
+<h3 class="first">Basic</h3>
+<p-table [value]="regions">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Population</th>
+            <th>Capital</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-region>
+        <tr>
+            <!--  <td>{{regions.Code}}</td>
+            <td>{{regions.Name}}</td>
+            <td>{{regions.Population}}</td>
+            <td>{{regions.Capital}}</td> -->
+        </tr>
+    </ng-template>
+</p-table>

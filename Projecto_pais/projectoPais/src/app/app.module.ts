@@ -6,23 +6,30 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaisesComponent } from './components/paises/paises.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 //Components for PrimeNG
 import { DropdownModule } from 'primeng/dropdown';
+import { TableModule } from 'primeng/table';
+import { ListadoPaisComponent } from './listado-pais/listado-pais.component';
+import { PaisService } from './services/pais.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaisesComponent
+    PaisesComponent,
+    ListadoPaisComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     DropdownModule,
-    FormsModule
+    FormsModule,
+    TableModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [PaisService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
