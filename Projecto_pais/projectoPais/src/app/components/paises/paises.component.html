@@ -1,1 +1,3 @@
-<p>paises works!</p>
+<h3 class="first">Choose the region: </h3>
+<p-dropdown [options]="regions" [(ngModel)]="selectedRegion" placeholder="Select a Region" optionLabel="name" [showClear]="true"></p-dropdown>
+<p>Selected City: {{selectedRegion ? selectedRegion.name : 'none'}}</p>
