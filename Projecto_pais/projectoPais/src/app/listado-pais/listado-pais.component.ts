@@ -9,15 +9,15 @@ import { Pais } from '../model/pais';
 })
 export class ListadoPaisComponent implements OnInit {
 
-  paises:Pais[] = [];
-  region:string = "europe";
+  paises: Pais[] = [];
+  region: string = "europe";
 
   constructor(private paisesService: PaisService) { }
 
   ngOnInit() {
     this.paisesService.getByRegion(this.region).subscribe(data => {
-    this.paises = data;
-    console.log(data);
+      this.paises = data;
+      console.log(data);
     });
   }
 

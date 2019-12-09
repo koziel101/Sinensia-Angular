@@ -16,7 +16,7 @@ export class PaisService {
     return this.http.get<Pais[]>(URL);
   }
 
-  getByRegion(region:string): Observable<Pais[]> {
+  getByRegion(region: string): Observable<Pais[]> {
     return this.http.get<Pais[]>(URL + region);
   }
 

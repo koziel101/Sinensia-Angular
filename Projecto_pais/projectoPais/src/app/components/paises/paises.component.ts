@@ -18,7 +18,7 @@ export class PaisesComponent implements OnInit {
   selectedRegion: Region;
   paises: Pais[] = [];
 
-  region:string = "europe";
+  region: string = "europe";
 
   constructor(private paisesService: PaisService) {
     this.regions = [
@@ -32,12 +32,12 @@ export class PaisesComponent implements OnInit {
 
   ngOnInit() { }
 
-  buscarPaises(){
+  buscarPaises() {
     console.log("Buscamos paises de " + this.selectedRegion.name);
     this.paisesService.getByRegion(this.selectedRegion.name).subscribe(data => {
       this.paises = data;
       console.log(data);
     });
-    
+
   }
 }

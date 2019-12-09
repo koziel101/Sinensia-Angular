@@ -1,5 +1,5 @@
 export class Pais {
-    code: number;
+    alpha3Code: number;
     name: string;
     population: number;
     capital: string;
