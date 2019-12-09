@@ -11,14 +11,12 @@ import { HttpClientModule } from '@angular/common/http';
 //Components for PrimeNG
 import { DropdownModule } from 'primeng/dropdown';
 import { TableModule } from 'primeng/table';
-import { ListadoPaisComponent } from './listado-pais/listado-pais.component';
 import { PaisService } from './services/pais.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PaisesComponent,
-    ListadoPaisComponent
+    PaisesComponent
   ],
   imports: [
     BrowserModule,
