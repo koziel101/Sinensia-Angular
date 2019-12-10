@@ -6,7 +6,7 @@
 
 <br>
 
-<h3 class="first">Basic</h3>
+<h3 class="first"></h3>
 <p-table [value]="paises">
     <ng-template pTemplate="header">
         <tr>
@@ -14,6 +14,7 @@
             <th>Name</th>
             <th>Population</th>
             <th>Capital</th>
+            <th>Language</th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-pais>
@@ -22,6 +23,11 @@
             <td>{{pais.name}}</td>
             <td>{{pais.population}}</td>
             <td>{{pais.capital}}</td>
+            <td>
+                <ul>
+                    <li *ngFor="let idioma of pais.languages">{{idioma.name}}</li>
+                </ul>
+            </td>
         </tr>
     </ng-template>
 </p-table>

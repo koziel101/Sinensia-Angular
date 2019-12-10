@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http'
 import { Observable } from 'rxjs';
 import { Pais } from '../model/pais';
 
-const URL = "https://restcountries.eu/rest/v2/region/";
+const URL = "https://restcountries.eu/rest/v2/";
 
 @Injectable({
   providedIn: 'root'
@@ -13,11 +13,10 @@ export class PaisService {
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<Pais[]> {
-    return this.http.get<Pais[]>(URL);
+    return this.http.get<Pais[]>(URL + "all");
   }
 
   getByRegion(region: string): Observable<Pais[]> {
-    return this.http.get<Pais[]>(URL + region);
+    return this.http.get<Pais[]>(URL + "region/" + region);
   }
-
 }
