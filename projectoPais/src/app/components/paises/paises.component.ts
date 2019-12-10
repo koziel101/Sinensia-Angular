@@ -17,6 +17,7 @@ export class PaisesComponent implements OnInit {
   regions: Region[];
   selectedRegion: Region;
   paises: Pais[] = [];
+  paisSelected: Pais;
 
   region: string = "";
 
@@ -43,6 +44,12 @@ export class PaisesComponent implements OnInit {
       this.paises = data;
       console.log(data);
     });
+  }
 
+  buscarPaisPorCodigo(countryCodeSelected) {
+    this.paisesService.getByCode(countryCodeSelected).subscribe(data => {
+      this.paisSelected = data;
+      console.log(data);
+    });
   }
 }

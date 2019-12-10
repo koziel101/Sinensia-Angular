@@ -19,4 +19,8 @@ export class PaisService {
   getByRegion(region: string): Observable<Pais[]> {
     return this.http.get<Pais[]>(URL + "region/" + region);
   }
+
+  getByCode(codigo: string): Observable<Pais> {
+    return this.http.get<Pais>(URL + "alpha/" + codigo);
+  }
 }

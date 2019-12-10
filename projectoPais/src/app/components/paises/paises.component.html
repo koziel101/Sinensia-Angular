@@ -1,3 +1,50 @@
+<h3>Search country by code:</h3>
+
+<span class="ui-float-label">
+    <input id="float-input" type="text" size="30" pInputText [(ngModel)]="countryCodeSelected"> 
+    <label for="float-input">Country code</label>
+    <button pButton type="button" label="Search" (click)="buscarPaisPorCodigo(countryCodeSelected)"></button>
+</span>
+<p>{{countryCodeSelected}}</p>
+<div *ngIf="paisSelected">
+    <p>Nombre: {{paisSelected.name}}</p>
+    <p>Capital: {{paisSelected.capital}}</p>
+</div>
+
+<!-- =============================================== -->
+
+<!-- <h3 class="first"></h3>
+<p-table>
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Population</th>
+            <th>Capital</th>
+            <th>Language</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body">
+        <tr>
+            <td>{{paisSelected.alpha3Code}}</td>
+            <td>{{paisSelected.name}}</td>
+            <td>{{paisSelected.population}}</td>
+            <td>{{paisSelected.capital}}</td>
+            <td>
+                <ul>
+                    <li *ngFor="let idioma of pais.languages">{{paisSelected.name}}</li>
+                </ul>
+            </td>
+        </tr>
+    </ng-template>
+</p-table> -->
+
+
+<!-- =============================================== -->
+
+
+<hr>
+
 <h3 class="first">Choose the region: </h3>
 <p-dropdown [options]="regions" [(ngModel)]="selectedRegion" placeholder="Select a Region" optionLabel="name" [showClear]="true" (onChange)="buscarPaises()">
 </p-dropdown>
