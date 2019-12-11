@@ -1,21 +1,9 @@
-<h2>Juego RestCountries</h2>
-
-<table>
-    <tr>
-        <th>Pais</th>
-        <th>Fronteras</th>
-    </tr>
-    <tr *ngFor="let pais of visitados">
-        <td>{{pais.name}}</td>
-        <td>
-            <span *ngFor="let frontera of pais.borders">{{frontera}}</span>
-        </td>
-    </tr>
-</table>
-
-<h2>Prueba de viajar</h2>
+<h2>Juego RestCountries {{visitados.length}}</h2>
 <div *ngIf="estancia">
-
+    <p>{{estancia.name}}</p>
+    <button [disabled]="!jugable" (click)="viajar(frontera)" *ngFor="let frontera of estancia.borders">{{frontera}}</button>
 </div>
-<p>{{estancia.name}}</p>
-<button click="viajar()" *ngFor="let frontera of estancia.borders">{{frontera}}</button>
+<hr>
+<div>
+    <button (click)="ngOnInit()">RESET</button>
+</div>

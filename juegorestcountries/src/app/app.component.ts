@@ -9,21 +9,30 @@ import { PaisService } from './services/pais.service';
 })
 export class AppComponent implements OnInit {
 
-  visitados: Pais[] = [];
+  visitados: string[] = [];
   estancia: Pais = undefined;
+  jugable: boolean = true;
 
   constructor(private paisService: PaisService) { }
 
   ngOnInit(): void {
     this.paisService.getByCode("ESP").subscribe(data => {
-      console.log(data);
-      this.visitados.push(data);
+      this.visitados = ["ESP"];
+      this.jugable = true;
       this.estancia = data;
-    })
+    });
   }
 
   viajar(codigoDestino: string) {
-    console.log(codigoDestino);
-  }
 
+    if (this.visitados.includes(codigoDestino)) {
+      this.jugable = false;
+    } else {
+      this.paisService.getByCode(codigoDestino).subscribe(data => {
+        this.estancia = data;
+        this.visitados.push(codigoDestino);
+      });
+    }
+
+  }
 }
