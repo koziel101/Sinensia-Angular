@@ -1,18 +1,16 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ListadoComponentComponent } from './components/listado-component/listado-component.component';
+import { TablaAlumnosComponent } from './components/tabla-alumnos/tabla-alumnos.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListadoComponentComponent
+    TablaAlumnosComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

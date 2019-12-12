@@ -1,0 +1,34 @@
+Ejercicio
+==========
+
+En un nuevo proyecto hemos de "pintar" dos tablas de alumnos.
+- En la primera tabla aparecerán los alumnos con más de 8 faltas.
+- En la segunda tabla aparecerán los alumnos a los que les falta menos de dos semanas para finalizar
+
+Tendremos que crear un modelo y un servicio.
+
+Como no tenemos backend ni end-points ni base de datos, vamos a crear alumnos "hardcodeados" en el servicio.
+
+
+Material
+========
+
+1.- clase de modelo: 	Alumno
+1.- servicio:		AlumnoService		
+1.- componente: 	ListadoComponent
+
+
+Ejemplo de la vista
+
+Alumnnos con más de 8 faltas
+
+NOMBRE	APELLIDO1	APELLIDO2 	NÚMERO DE FALTAS
+Pepín	Gálvez		Ridruejo	13
+Ana	Martos		Peralta		8
+Luisa	Martínez	Pérez		9
+
+Alumnos que finalizan antes de 2 semanas
+
+NOMBRE	APELLIDO1	APELLIDO2	FECHA DE FINALIZACIÓN
+Pepín	Gálvez		Ridruejo	14/12/2019
+Marta	Vidal		de la Rubia	15/12/2019

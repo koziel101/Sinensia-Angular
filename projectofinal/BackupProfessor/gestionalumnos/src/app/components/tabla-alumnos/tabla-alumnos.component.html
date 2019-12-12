@@ -1,0 +1,35 @@
+<h1>Tablas de Alumnos</h1>
+<h2>Faltones</h2>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Primer Apellido</th>
+        <th>Segundo Apellido</th>
+        <th>Número de Faltas</th>
+    </tr>
+    <tr *ngFor="let alumno of faltones">
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.apellido1}}</td>
+        <td>{{alumno.apellido2}}</td>
+        <td>{{alumno.faltas}}</td>
+    </tr>
+</table>
+
+<h2>Alumnos a dos semanas de finalizar</h2>
+
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Primer Apellido</th>
+        <th>Segundo Apellido</th>
+        <th>Fecha Finalización</th>
+    </tr>
+    <tr *ngFor="let alumno of aPuntoAcabar">
+        <td>{{alumno.nombre}}</td>
+        <td>{{alumno.apellido1}}</td>
+        <td>{{alumno.apellido2}}</td>
+        <td>{{alumno.fechaFinal | date:'dd/MM/yyyy'}}</td>
+    </tr>
+</table>
+
